@@ -1,0 +1,77 @@
+<!-- Header -->
+<link rel="stylesheet" href="style.css">
+<script src="js.js"></script>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>IBC CAFE</h1>
+                <p>Завжди смачно та вигідно</p>
+            </div>
+            <button class="cart-btn" id="cartBtn" onclick="showCheckout()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m1.6 8L6 6H3m4 7v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6"/>
+                    <circle cx="9" cy="20" r="1"/>
+                    <circle cx="16" cy="20" r="1"/>
+                </svg>
+                <span>Корзина</span>
+                <div class="cart-count hidden" id="cartCount">0</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <div class="menu-header">
+            <h2>Страви в наявності</h2>
+            <p>Пропонуємо вам обрати страви та зручно оформити замовлення</p>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floatingCart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m1.6 8L6 6H3m4 7v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6"/>
+            <circle cx="9" cy="20" r="1"/>
+            <circle cx="16" cy="20" r="1"/>
+        </svg>
+        <span id="floatingCartText">0 items • ₴0.00</span>
+    </div>
+
+    <!-- Checkout -->
+    <div class="checkout" id="checkout">
+        <div class="checkout-content">
+            <div class="checkout-card">
+                <h2 class="checkout-title">Оформлення замовлення</h2>
+
+                <div class="checkout-section">
+                    <h3 class="section-title">Ваше замовлення</h3>
+                    <div id="orderSummary">
+                        <!-- Order items will be populated by JavaScript -->
+                    </div>
+                    <div class="order-total">
+                        <span class="total-label">Сума:</span>
+                        <span class="total-amount" id="checkoutTotal">₴0.00</span>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3 class="section-title">Деталі замовлення</h3>
+                    <div class="form-grid">
+                        <input type="text" class="form-input" placeholder="Ім'я" required>
+                        <input type="text" class="form-input" placeholder="Призвище" required>
+                        <input type="email" class="form-input full-width" placeholder="Email" required>
+                        <input type="tel" class="form-input full-width" placeholder="Номер телефону" required>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="backToMenu()">Повернутись до меню</button>
+                    <button class="btn btn-primary" onclick="placeOrder()">Перейти до оплати</button>
+                </div>
+            </div>
+        </div>
+    </div>
